@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS do Bootstrap -->
+     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (necessário para o Bootstrap 4 e versões anteriores) -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+    <!-- JavaScript do Bootstrap -->
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS -->
+     <link rel="stylesheet" href="/styles/edit.css">
+
+    <!-- FONT-AWESOME -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <%- include('menu.ejs') %>
+    <!-- navbar -->
+
+    <main class="container">
+
+        <span id="btnBack">
+            <a href="/">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        </span>
+
+        <div class="card mt-4">
+            <div class="card-header">
+                <p>Editar Tarefa: #<%- tasks._id %></p>
+            </div>
+            <div class="card-body">
+                <form id="formEdit" method="POST" action="/edit/<%- tasks.id %>">
+                    <label id="date">
+                        <span>
+                            <i class="fa-solid fa-calendar-days"></i>
+                        </span>
+                        <p>Data:</p>
+                    </label>
+                    <input type="date" name="date" class="form-control" value="<%- tasks.date %>">
+
+                    <label class="mt-4">
+                        <span>
+                            <i class="fa-solid fa-pencil"></i>
+                        </span>
+                        <p>Tarefa:</p>
+                    </label>
+                    <input type="text" name="content" class="form-control" value="<%- tasks.content %>">
+
+                    <button type="submit" class="btn btn-primary">Editar Tarefa</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

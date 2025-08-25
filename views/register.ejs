@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="/styles/register.css">
+    <!-- FONT-AWESOME -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <main class="container">
+        <% if(error_msg && error_msg.length > 0) { %>
+            <div class="alert alert-danger">
+                
+
+                <% error_msg.forEach(msg => { %>
+                    <%- msg %>
+                <% }) %>
+            </div>
+        <% } %>
+        
+        <div class="content">
+            <div class="card">
+                <span id="test">
+                    <img src="/styles/logo/logo.png" class="logo">
+                </span>
+
+                <p id="txt-2" class="mt-4">Anote e organize suas tarefas aqui.</p>
+
+                <p id="txt-3" class="mt-2">Já possui uma conta ? <a href="/login">Click aqui</a> </p>
+            </div>
+
+            <div id="div-form">
+                <form method="post" action="/signup">
+                    <p>Crie já sua conta! É simples e rápido.</p>
+                    <input type="text" name="name" class="form-control" placeholder="Nome">
+                    <input type="email" name="email" class="form-control" placeholder="Email...">
+                    <input type="password" name="password" class="form-control" minlength="4" placeholder="Senha...">
+                    <button type="submit">Cadastre-se</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
