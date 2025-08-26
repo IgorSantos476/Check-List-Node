@@ -84,50 +84,37 @@ main {
     }
 }
 
-#allTasks ul li {
-    border: 1px solid rgb(167, 167, 167);
-    border-radius: 15px;
-    padding: 18px 20px;
+#every-task {
+    background-color: rgb(168, 203, 226);
+    border-radius: 8px;
+    min-height: 20vh;
+    padding: 5px;
+}
+
+.etiqueta {
+    background-color: white;
+    border-radius: 12px;
+    padding: 3px 8px;
+    font-weight: bold;
+}
+
+.content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-bottom: 1%;
 }
 
-.btnCompleted i {
-    font-size: 1.5em;
+.content-2 p {
+    padding: 0;
+    /* margin: 0; */
 }
 
-.task {
-    font-size: 4em;
-}
-
-#list-btn a {
-    border: none;
-    background-color: none;
-    text-decoration: none;
-    margin-right: 10px;
-}
-
-#trash {
-    color: rgb(187, 40, 40);
-}
-
-#edit {
-    color: rgb(16, 107, 182);
-}
-
-.span-tasks {
-    display: flex;
-}
-
-#allTasks ul p {
+/* #allTasks ul p {
     margin: auto;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
     font-size: clamp(12px, 1vw, 1em);
-}
+} */
 
 .completed {
     text-decoration: line-through;

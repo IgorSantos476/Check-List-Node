@@ -40,28 +40,29 @@
         </div> <br>
 
         <div class="container" id="allTasks">
-            <ul>
+            <ul id="" class="row">
                 <% tasks.forEach(el => { %>
-                    <li>
-                        <div class="span-tasks">
-                            <button class="btn btnCompleted">
-                                <i class="fa-regular fa-square"></i>
-                            </button>
+                    <li class="col-md-6" id="every-task">
+                        <div class="content">
+                            <div class="content-1">
+                                <span class="etiqueta">Lazer</span>
+                                <p class="task"> <%- el.content%> </p>
+                                <p class="date"> <%- el.date %> </p>
+                            </div>
 
-                            <span>
-                                <p id="titleTask">Limpeza</p>
-                                <p class="task"><%- el.content %></p>
-                            </span>
-                        </div>
+                            <div class="content-2">
+                                <p>
+                                    <button class="btn">
+                                        <i class="fa-regular fa-circle"></i>
+                                    </button>
+                                    Concluir
+                                </p>
 
-                        <div id="list-btn">
-                            <a href="/delete/<%- el.id %>" id="trash">
-                                <i class="fa-solid fa-trash-can"></i>
-                            </a>
-
-                            <a href="/edit/<%- el.id %>" id="edit">
-                                <i class="fa-solid fa-pencil"></i>
-                            </a>
+                                <ul>
+                                    <li> <a href="">a</a> </li>
+                                    <li> <a href="">a</a> </li>
+                                </ul>
+                            </div>
                         </div>
                     </li>
                 <% }) %>
@@ -158,3 +159,4 @@
 
 </body>
 </html>
+
