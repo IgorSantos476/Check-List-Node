@@ -168,15 +168,4 @@ router.get('/logout', (req, res) => {
     res.redirect('/');
 });
 
-// *******************************
-router.get('/testing', async (req, res) => {
-    try {
-        let tasks = await TaskDB.find();
-        res.render('dashboard.ejs', {tasks: tasks});
-    } catch(err) {
-        console.log(err);
-        res.render('dashboard.ejs', {tasks: []});
-    }
-});
-
 module.exports = router;
