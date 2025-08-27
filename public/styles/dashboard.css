@@ -85,27 +85,54 @@ main {
 }
 
 #every-task {
-    background-color: rgb(168, 203, 226);
+    background-color: rgb(195, 219, 235);
     border-radius: 8px;
     min-height: 20vh;
-    padding: 5px;
+    padding: 6px;
+}
+
+.content-1 {
+    display: inline-grid;
+    grid-template-columns: auto;
+    align-items: center;
+    /* background-color: aliceblue; */
 }
 
 .etiqueta {
     background-color: white;
     border-radius: 12px;
-    padding: 3px 8px;
     font-weight: bold;
+    text-align: center;
 }
 
 .content {
     display: flex;
     justify-content: space-between;
+    height: 100%;
+    /* background-color: aliceblue; */
 }
 
-.content-2 p {
-    padding: 0;
-    /* margin: 0; */
+.task {
+    /* font-size: 1.3em; */
+}
+
+.content-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-2 ul {
+    display: flex;
+    gap: 25%;
+}
+
+#btnDelete {
+    color: rgb(209, 77, 77);
+}
+
+#btnEdit {
+    color: rgb(58, 137, 184);
 }
 
 /* #allTasks ul p {
