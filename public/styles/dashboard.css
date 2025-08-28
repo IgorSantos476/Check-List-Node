@@ -85,18 +85,28 @@ main {
 }
 
 #every-task {
-    background-color: rgb(195, 219, 235);
+    background-color: rgb(224, 230, 235);
+    border: 1px solid rgb(145, 164, 175);
     border-radius: 8px;
     min-height: 20vh;
     padding: 6px;
 }
 
 .content-1 {
-    display: inline-grid;
-    grid-template-columns: auto;
-    align-items: center;
-    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
 }
+
+/* .content-1 > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+} */
 
 .etiqueta {
     background-color: white;
@@ -128,11 +138,11 @@ main {
 }
 
 #btnDelete {
-    color: rgb(209, 77, 77);
+    color: rgb(212, 26, 26);
 }
 
 #btnEdit {
-    color: rgb(58, 137, 184);
+    color: rgb(28, 136, 199);
 }
 
 /* #allTasks ul p {
