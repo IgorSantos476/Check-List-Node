@@ -40,30 +40,30 @@
         </div> <br>
 
         <div class="container" id="allTasks">
-            <ul id="" class="row">
+            <ul class="row tasks">
                 <% tasks.forEach(el => { %>
                     <li class="col-md-6" id="every-task">
                         <div class="content">
                             <div class="content-1">
                                 <span class="etiqueta">Lazer</span>
-                                <p class="task"> <%- el.content%> </p>
+                                <p class="task fw-bold"> <%- el.content%> </p>
                                 <p class="date"> <%- el.date %> </p>
                             </div>
 
                             <div class="content-2">
                                 <p>
-                                    <button class="btn fw-bold">
+                                    <button class="btn fw-bold btnCompleted">
                                         <i class="fa-regular fa-circle"></i>
                                         Concluir
                                     </button>
                                 </p>
 
                                 <ul>
-                                    <li> <a href="" id="btnDelete">
+                                    <li> <a href="/delete/<%- el.id %>" id="btnDelete">
                                         <i class="fa-solid fa-trash-can"></i>
                                     </a></li>
 
-                                    <li> <a href="" id="btnEdit">
+                                    <li> <a href="/edit/<%- el.id %>" id="btnEdit">
                                         <i class="fa-solid fa-pencil"></i>
                                     </a> </li>
                                 </ul>
@@ -129,7 +129,7 @@
         btnCompleted.forEach(btn => {
             btn.addEventListener('click', () => {
                 let icon = btn.querySelector('i');
-                let task = btn.closest('.span-tasks').querySelector('.task');
+                let task = btn.closest('.content').querySelector('.task');
 
                 if(icon.classList.contains('fa-square-check')) {
                     icon.classList.remove('fa-square-check');
@@ -141,13 +141,12 @@
                     icon.classList.add('fa-square-check');
                     task.classList.add('completed');
                 }
-                // <i class="fa-solid fa-circle-check"></i>
                 updateProgress();
             });
         });
 
         function updateProgress() {
-            const allTasks = document.querySelectorAll('.task');
+            const allTasks = document.querySelectorAll('.tasks');
             const completedTasks = document.querySelectorAll('.task.completed');
 
             const total = allTasks.length;

@@ -85,7 +85,7 @@ main {
 }
 
 #every-task {
-    background-color: rgb(224, 230, 235);
+    background-color: rgb(233, 237, 240);
     border: 1px solid rgb(145, 164, 175);
     border-radius: 8px;
     min-height: 20vh;
@@ -99,17 +99,14 @@ main {
     height: 100%;
 }
 
-/* .content-1 > * {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    box-sizing: border-box;
-} */
+.content-1 p {
+    padding: 0;
+    margin: 0;
+}
 
 .etiqueta {
     background-color: white;
+    width: 80%;
     border-radius: 12px;
     font-weight: bold;
     text-align: center;
@@ -119,11 +116,10 @@ main {
     display: flex;
     justify-content: space-between;
     height: 100%;
-    /* background-color: aliceblue; */
 }
 
 .task {
-    /* font-size: 1.3em; */
+    font-size: clamp(0.8em, 1.5vw, 2em);
 }
 
 .content-2 {
