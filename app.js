@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 
 // SESSION
 app.use(session({
-    secret: 'wordKey',
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: false
 }));
