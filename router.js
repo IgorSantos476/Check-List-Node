@@ -110,15 +110,15 @@ router.get(`/dashboard`, RequireLogin, async (req, res) => {
 
 // ROUTER CREATE TASK
 router.post('/createTask', async (req, res) => {
-    const {content, date} = req.body;
+    const {title, content} = req.body;
 
     if(!content || !content.trim()) return;
-    if(!date || !date.trim()) return;
+    if(!title || !title.trim()) return;
 
-    let dateFormatted = new Date(date).toISOString().split('T')[0];
+    let date = new Date().toISOString().split('T')[0];
 
     try {
-        let task = new TaskDB({content, date: dateFormatted, user: req.session.userId});
+        let task = new TaskDB({title, content, date, user: req.session.userId});
         await task.save();
         res.redirect('/');
 
@@ -133,7 +133,7 @@ router.get('/delete/:id', async (req, res) => {
 
     try {
         await TaskDB.findByIdAndDelete(id);
-        res.redirect('/testing');
+        res.redirect('/');
     } catch(err) {
         console.log(err);
         res.send('Task not found');
