@@ -18,7 +18,7 @@ EJS | CSS | BOOTSTRAP | NODEJS | MONGODB
 
 ### Passo a passo:
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/IgorSantos476/Check-List-Node.git
 
 # Acesse a pasta do projeto
 cd Check-List-Node
